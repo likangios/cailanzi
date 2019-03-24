@@ -22,7 +22,7 @@ pod 'AFNetworking'
 pod 'CDDPagerController'
 pod 'ZYCornerRadius'
 pod 'BlocksKit', '~> 2.2.5'
-
+pod 'AVOSCloud'
   # Pods for cailanzi
 
 end
