@@ -30,6 +30,20 @@
     [super viewWillAppear:animated];
     [self.view bringSubviewToFront:self.customNavBar];
     self.viewDisplayCount += 1;
+
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        NSArray *hiddenTabBarClass = @[@"CLZAddressManagerViewController",@"CLZOrdersViewController",@"CLZFanKuiViewController"];
+        BOOL shouldHid = [hiddenTabBarClass bk_any:^BOOL(NSString* obj) {
+            return [obj isEqualToString:NSStringFromClass(self.class)];
+        }];
+        if (shouldHid) {
+            self.hidesBottomBarWhenPushed = YES;
+        }
+    }
+    return self;
 }
 #pragma mark - LifeCyle
 - (void)viewDidLoad {
@@ -43,6 +57,15 @@
     [self bottomLine];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(adjustStatusBar) name:@"UIApplicationDidChangeStatusBarFrameNotification" object:nil];
     self.statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    NSString *className =  NSStringFromClass(self.class);
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ClassName" ofType:@"plist"];
+    NSDictionary *classDic = [NSDictionary dictionaryWithContentsOfFile:path];
+    [self setNavBarTitle:classDic[className]];
+    if ([self.navigationController.viewControllers indexOfObject:self]) {
+        [self addDefaultBackItem];
+    }
+
+    
 }
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;

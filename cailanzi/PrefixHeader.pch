@@ -38,6 +38,18 @@
 #import <YYKit.h>
 #import "CLZAPIManager.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "CLZUserInfo.h"
+#import "CLZStorageManager.h"
+#import "CLZGoodsModel.h"
+#import "CLZNetworkManager.h"
+#import <WMPageController.h>
+#import "CLZTypeModel.h"
+#import "CLZCarModel.h"
+#import "CLZCarManager.h"
+#import "CLZAddressModel.h"
+#import "CLZBaseModel.h"
+#import "CLZConfig.h"
+#import "CLZOrderModel.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

@@ -20,6 +20,16 @@
     self.delegate = self;
     [self addDcChildViewContorller];
     self.selectedIndex = 0;
+    @weakify(self);
+    [RACObserve([CLZCarManager shareInstance], allCount) subscribeNext:^(NSNumber *x) {
+        @strongify(self);
+        UIViewController *vc = self.viewControllers[1];
+        vc.tabBarItem.badgeValue = x.integerValue?x.stringValue:nil;
+        
+    }];
+
+
+    
 }
 #pragma mark - 添加子控制器
 - (void)addDcChildViewContorller
@@ -27,58 +37,49 @@
     NSArray *childArray = @[
                             @{MallClassKey  : @"CLZHomeViewController",
                               MallTitleKey  : @"首页",
-                              MallImgKey    : @"tab_sc_notify",
-                              MallSelImgKey : @"tab_sc_notify_sel"},
+                              MallImgKey    : @"tab_home",
+                              MallSelImgKey : @"tab_home_sel"},
                             
                             @{MallClassKey  : @"CLZCarViewController",
                               MallTitleKey  : @"菜篮子",
-                              MallImgKey    : @"tab_connect",
-                              MallSelImgKey : @"tab_connect_sel"},
+                              MallImgKey    : @"tab_car",
+                              MallSelImgKey : @"tab_car_sel"},
                             
                             @{MallClassKey  : @"CLZMineViewController",
                               MallTitleKey  : @"我的",
-                              MallImgKey    : @"tab_mine",
-                              MallSelImgKey : @"tab_mine_sel"},
+                              MallImgKey    : @"tab_wd",
+                              MallSelImgKey : @"tab_wd_sel"},
                             ];
     [childArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL * _Nonnull stop) {
         
         UIViewController *vc = [NSClassFromString(dict[MallClassKey]) new];
-        CLZBaseNavigationController *nav = [[CLZBaseNavigationController alloc] initWithRootViewController:vc];
-        UITabBarItem *item = nav.tabBarItem;
+        UINavigationController *nav = [[NSClassFromString(@"CLZBaseNavigationController") alloc] initWithRootViewController:vc];
+        UITabBarItem *item = vc.tabBarItem;
         item.title = dict[MallTitleKey];
-        item.image = [UIImage imageNamed:dict[MallImgKey]];
+        item.image = [[UIImage imageNamed:dict[MallImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         item.selectedImage = [[UIImage imageNamed:dict[MallSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:MainColor} forState:UIControlStateSelected];
-        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"7e7e7e"]} forState:UIControlStateNormal];
+//        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+//        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"7e7e7e"]} forState:UIControlStateNormal];
         [item setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} forState:UIControlStateNormal];
         [item setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} forState:UIControlStateSelected];
+        
         [self addChildViewController:nav];
         
     }];
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-//    if ([self.viewControllers indexOfObject:viewController] == 4 && ![SMUserInfo shareInstance].isLogin) {
-//
-//        [self showLogin];
-//        return NO;
-//    }
+    if ([self.viewControllers indexOfObject:viewController] == 2 && ![CLZUserInfo shareInstance].isLogin) {
+        [self showLogin];
+        return NO;
+    }
     return YES;
 }
 - (void)showLogin{
-//    SMLoginViewController *login = [[SMLoginViewController alloc]init];
-//    SMNabigationController *nav = [[SMNabigationController alloc]initWithRootViewController:login];
-//    [self presentViewController:nav animated:YES completion:nil];
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    return cell;
+    UIViewController *login = [[NSClassFromString(@"CLZLoginViewController") alloc]init];
+    UINavigationController *nav = [[NSClassFromString(@"CLZBaseNavigationController") alloc]initWithRootViewController:login];
+    [self presentViewController:nav animated:YES completion:nil];
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

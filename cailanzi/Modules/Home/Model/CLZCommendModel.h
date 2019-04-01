@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLZGoodsModel.h"
+#import "CLZBaseModel.h"
 /*
  "firstPage":1,
  "hasNextPage":false,
@@ -29,7 +29,7 @@
  "unitName":"箱"
  },
  */
-@interface CLZCommendModel : NSObject
+@interface CLZCommendModel : CLZBaseModel
 @property(nonatomic,strong) NSNumber *firstPage;
 @property(nonatomic,assign) BOOL hasNextPage;
 @property(nonatomic,assign) BOOL hasPreviousPage;

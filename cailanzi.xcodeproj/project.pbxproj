@@ -16,6 +16,36 @@
 		844CAB9C2247BBD10096D567 /* 特菜.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB952247BBCF0096D567 /* 特菜.json */; };
 		844CAB9D2247BBD10096D567 /* 叶菜类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB962247BBD00096D567 /* 叶菜类.json */; };
 		844CAB9E2247BBD10096D567 /* 茄果类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB972247BBD00096D567 /* 茄果类.json */; };
+		844CABA1224912130096D567 /* CLZNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA0224912130096D567 /* CLZNetworkManager.m */; };
+		844CABA42249130C0096D567 /* CLZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA32249130C0096D567 /* CLZUserInfo.m */; };
+		844CABA72249133C0096D567 /* CLZStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA62249133C0096D567 /* CLZStorageManager.m */; };
+		844CABAB224914820096D567 /* CLZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABAA224914820096D567 /* CLZLoginViewController.m */; };
+		844CABAE2249149D0096D567 /* CLZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABAD2249149D0096D567 /* CLZRegisterViewController.m */; };
+		844CABB122491A500096D567 /* CLZFanKuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABB022491A500096D567 /* CLZFanKuiViewController.m */; };
+		844CABB422491AAC0096D567 /* CLZProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABB322491AAC0096D567 /* CLZProtocolViewController.m */; };
+		844CABB722491ACE0096D567 /* CLZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABB622491ACE0096D567 /* CLZAboutViewController.m */; };
+		844CABBB22491CC60096D567 /* CLZOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABBA22491CC60096D567 /* CLZOrdersViewController.m */; };
+		844CABBF22491EAC0096D567 /* CLZAddressManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABBE22491EAC0096D567 /* CLZAddressManagerViewController.m */; };
+		844CABC122491EF30096D567 /* ClassName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844CABC022491EF30096D567 /* ClassName.plist */; };
+		844CABC4224923BB0096D567 /* CLZGoodsTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABC3224923BB0096D567 /* CLZGoodsTypeModel.m */; };
+		844CABC7224A74E30096D567 /* CLZHomeDisplayPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABC6224A74E30096D567 /* CLZHomeDisplayPageController.m */; };
+		844CABCA224A80690096D567 /* CLZTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABC9224A80690096D567 /* CLZTypeModel.m */; };
+		844CABCD224A81410096D567 /* CLZGoosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABCC224A81410096D567 /* CLZGoosListViewController.m */; };
+		844CABD0224BB1E90096D567 /* CLZCarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABCF224BB1E90096D567 /* CLZCarManager.m */; };
+		844CABD3224BB20A0096D567 /* CLZCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABD2224BB20A0096D567 /* CLZCarModel.m */; };
+		844CABD6224D1A8A0096D567 /* CLZAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABD5224D1A8A0096D567 /* CLZAddressModel.m */; };
+		844CABD9224E60770096D567 /* CLZConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABD8224E60770096D567 /* CLZConfirmOrderViewController.m */; };
+		844CABE0224E61610096D567 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABDB224E615F0096D567 /* CityModel.m */; };
+		844CABE1224E61610096D567 /* RCAddressSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABDD224E61600096D567 /* RCAddressSelectView.m */; };
+		844CABE2224E61610096D567 /* RCAreaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABDF224E61610096D567 /* RCAreaManager.m */; };
+		844CABE5224E62930096D567 /* CLZAddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABE4224E62930096D567 /* CLZAddAddressViewController.m */; };
+		844CABE7224E6F940096D567 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CABE6224E6F940096D567 /* area.json */; };
+		844CABEA2250CA920096D567 /* CLZMyOrdersPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABE92250CA920096D567 /* CLZMyOrdersPageViewController.m */; };
+		844CABED2250CAE20096D567 /* CLZMyOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABEC2250CAE20096D567 /* CLZMyOrderTableViewController.m */; };
+		844CABF02250CD1B0096D567 /* CLZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABEF2250CD1B0096D567 /* CLZBaseModel.m */; };
+		844CABF322510BF90096D567 /* CLZConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF222510BF90096D567 /* CLZConfig.m */; };
+		844CABF6225252CF0096D567 /* CLZMyOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */; };
+		844CABF9225259150096D567 /* CLZOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF8225259150096D567 /* CLZOrderModel.m */; };
 		84866FFD223FD7F700D2B726 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84866FFC223FD7F700D2B726 /* AppDelegate.m */; };
 		84867000223FD7F700D2B726 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84866FFF223FD7F700D2B726 /* ViewController.m */; };
 		84867003223FD7F700D2B726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84867001223FD7F700D2B726 /* Main.storyboard */; };
@@ -63,6 +93,64 @@
 		844CAB952247BBCF0096D567 /* 特菜.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "特菜.json"; path = "../../../../美菜/特菜.json"; sourceTree = "<group>"; };
 		844CAB962247BBD00096D567 /* 叶菜类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "叶菜类.json"; path = "../../../../美菜/叶菜类.json"; sourceTree = "<group>"; };
 		844CAB972247BBD00096D567 /* 茄果类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "茄果类.json"; path = "../../../../美菜/茄果类.json"; sourceTree = "<group>"; };
+		844CAB9F224912130096D567 /* CLZNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZNetworkManager.h; sourceTree = "<group>"; };
+		844CABA0224912130096D567 /* CLZNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZNetworkManager.m; sourceTree = "<group>"; };
+		844CABA22249130C0096D567 /* CLZUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZUserInfo.h; sourceTree = "<group>"; };
+		844CABA32249130C0096D567 /* CLZUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZUserInfo.m; sourceTree = "<group>"; };
+		844CABA52249133C0096D567 /* CLZStorageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZStorageManager.h; sourceTree = "<group>"; };
+		844CABA62249133C0096D567 /* CLZStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZStorageManager.m; sourceTree = "<group>"; };
+		844CABA9224914820096D567 /* CLZLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZLoginViewController.h; sourceTree = "<group>"; };
+		844CABAA224914820096D567 /* CLZLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZLoginViewController.m; sourceTree = "<group>"; };
+		844CABAC2249149D0096D567 /* CLZRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZRegisterViewController.h; sourceTree = "<group>"; };
+		844CABAD2249149D0096D567 /* CLZRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZRegisterViewController.m; sourceTree = "<group>"; };
+		844CABAF22491A500096D567 /* CLZFanKuiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZFanKuiViewController.h; sourceTree = "<group>"; };
+		844CABB022491A500096D567 /* CLZFanKuiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZFanKuiViewController.m; sourceTree = "<group>"; };
+		844CABB222491AAC0096D567 /* CLZProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZProtocolViewController.h; sourceTree = "<group>"; };
+		844CABB322491AAC0096D567 /* CLZProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZProtocolViewController.m; sourceTree = "<group>"; };
+		844CABB522491ACE0096D567 /* CLZAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZAboutViewController.h; sourceTree = "<group>"; };
+		844CABB622491ACE0096D567 /* CLZAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZAboutViewController.m; sourceTree = "<group>"; };
+		844CABB922491CC60096D567 /* CLZOrdersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZOrdersViewController.h; sourceTree = "<group>"; };
+		844CABBA22491CC60096D567 /* CLZOrdersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZOrdersViewController.m; sourceTree = "<group>"; };
+		844CABBD22491EAC0096D567 /* CLZAddressManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZAddressManagerViewController.h; sourceTree = "<group>"; };
+		844CABBE22491EAC0096D567 /* CLZAddressManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZAddressManagerViewController.m; sourceTree = "<group>"; };
+		844CABC022491EF30096D567 /* ClassName.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ClassName.plist; sourceTree = "<group>"; };
+		844CABC2224923BB0096D567 /* CLZGoodsTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZGoodsTypeModel.h; sourceTree = "<group>"; };
+		844CABC3224923BB0096D567 /* CLZGoodsTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZGoodsTypeModel.m; sourceTree = "<group>"; };
+		844CABC5224A74E30096D567 /* CLZHomeDisplayPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZHomeDisplayPageController.h; sourceTree = "<group>"; };
+		844CABC6224A74E30096D567 /* CLZHomeDisplayPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZHomeDisplayPageController.m; sourceTree = "<group>"; };
+		844CABC8224A80690096D567 /* CLZTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZTypeModel.h; sourceTree = "<group>"; };
+		844CABC9224A80690096D567 /* CLZTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZTypeModel.m; sourceTree = "<group>"; };
+		844CABCB224A81410096D567 /* CLZGoosListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZGoosListViewController.h; sourceTree = "<group>"; };
+		844CABCC224A81410096D567 /* CLZGoosListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZGoosListViewController.m; sourceTree = "<group>"; };
+		844CABCE224BB1E90096D567 /* CLZCarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZCarManager.h; sourceTree = "<group>"; };
+		844CABCF224BB1E90096D567 /* CLZCarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZCarManager.m; sourceTree = "<group>"; };
+		844CABD1224BB20A0096D567 /* CLZCarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZCarModel.h; sourceTree = "<group>"; };
+		844CABD2224BB20A0096D567 /* CLZCarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZCarModel.m; sourceTree = "<group>"; };
+		844CABD4224D1A8A0096D567 /* CLZAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZAddressModel.h; sourceTree = "<group>"; };
+		844CABD5224D1A8A0096D567 /* CLZAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZAddressModel.m; sourceTree = "<group>"; };
+		844CABD7224E60770096D567 /* CLZConfirmOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZConfirmOrderViewController.h; sourceTree = "<group>"; };
+		844CABD8224E60770096D567 /* CLZConfirmOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZConfirmOrderViewController.m; sourceTree = "<group>"; };
+		844CABDA224E615F0096D567 /* RCAddressSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAddressSelectView.h; sourceTree = "<group>"; };
+		844CABDB224E615F0096D567 /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		844CABDC224E615F0096D567 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
+		844CABDD224E61600096D567 /* RCAddressSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAddressSelectView.m; sourceTree = "<group>"; };
+		844CABDE224E61600096D567 /* RCAreaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAreaManager.h; sourceTree = "<group>"; };
+		844CABDF224E61610096D567 /* RCAreaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAreaManager.m; sourceTree = "<group>"; };
+		844CABE3224E62930096D567 /* CLZAddAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZAddAddressViewController.h; sourceTree = "<group>"; };
+		844CABE4224E62930096D567 /* CLZAddAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZAddAddressViewController.m; sourceTree = "<group>"; };
+		844CABE6224E6F940096D567 /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
+		844CABE82250CA920096D567 /* CLZMyOrdersPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZMyOrdersPageViewController.h; sourceTree = "<group>"; };
+		844CABE92250CA920096D567 /* CLZMyOrdersPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZMyOrdersPageViewController.m; sourceTree = "<group>"; };
+		844CABEB2250CAE20096D567 /* CLZMyOrderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZMyOrderTableViewController.h; sourceTree = "<group>"; };
+		844CABEC2250CAE20096D567 /* CLZMyOrderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZMyOrderTableViewController.m; sourceTree = "<group>"; };
+		844CABEE2250CD1B0096D567 /* CLZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZBaseModel.h; sourceTree = "<group>"; };
+		844CABEF2250CD1B0096D567 /* CLZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZBaseModel.m; sourceTree = "<group>"; };
+		844CABF122510BF90096D567 /* CLZConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZConfig.h; sourceTree = "<group>"; };
+		844CABF222510BF90096D567 /* CLZConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZConfig.m; sourceTree = "<group>"; };
+		844CABF4225252CF0096D567 /* CLZMyOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZMyOrderTableViewCell.h; sourceTree = "<group>"; };
+		844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZMyOrderTableViewCell.m; sourceTree = "<group>"; };
+		844CABF7225259150096D567 /* CLZOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZOrderModel.h; sourceTree = "<group>"; };
+		844CABF8225259150096D567 /* CLZOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZOrderModel.m; sourceTree = "<group>"; };
 		84866FF8223FD7F700D2B726 /* cailanzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cailanzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84866FFB223FD7F700D2B726 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84866FFC223FD7F700D2B726 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,8 +260,24 @@
 			children = (
 				84867061224125DA00D2B726 /* CLZGoodsModel.h */,
 				84867062224125DA00D2B726 /* CLZGoodsModel.m */,
+				844CABD4224D1A8A0096D567 /* CLZAddressModel.h */,
+				844CABD5224D1A8A0096D567 /* CLZAddressModel.m */,
+				844CABC8224A80690096D567 /* CLZTypeModel.h */,
+				844CABC9224A80690096D567 /* CLZTypeModel.m */,
 				84867064224125F300D2B726 /* CLZCommendModel.h */,
 				84867065224125F400D2B726 /* CLZCommendModel.m */,
+				844CABA22249130C0096D567 /* CLZUserInfo.h */,
+				844CABA32249130C0096D567 /* CLZUserInfo.m */,
+				844CABD1224BB20A0096D567 /* CLZCarModel.h */,
+				844CABD2224BB20A0096D567 /* CLZCarModel.m */,
+				844CABC2224923BB0096D567 /* CLZGoodsTypeModel.h */,
+				844CABC3224923BB0096D567 /* CLZGoodsTypeModel.m */,
+				844CABEE2250CD1B0096D567 /* CLZBaseModel.h */,
+				844CABEF2250CD1B0096D567 /* CLZBaseModel.m */,
+				844CABF122510BF90096D567 /* CLZConfig.h */,
+				844CABF222510BF90096D567 /* CLZConfig.m */,
+				844CABF7225259150096D567 /* CLZOrderModel.h */,
+				844CABF8225259150096D567 /* CLZOrderModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +287,12 @@
 			children = (
 				848670672241296300D2B726 /* CLZHomeCommendRequest.h */,
 				848670682241296300D2B726 /* CLZHomeCommendRequest.m */,
+				844CAB9F224912130096D567 /* CLZNetworkManager.h */,
+				844CABA0224912130096D567 /* CLZNetworkManager.m */,
+				844CABCE224BB1E90096D567 /* CLZCarManager.h */,
+				844CABCF224BB1E90096D567 /* CLZCarManager.m */,
+				844CABA52249133C0096D567 /* CLZStorageManager.h */,
+				844CABA62249133C0096D567 /* CLZStorageManager.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -190,6 +300,7 @@
 		844CAB902247BBBD0096D567 /* json */ = {
 			isa = PBXGroup;
 			children = (
+				844CABE6224E6F940096D567 /* area.json */,
 				844CAB932247BBCE0096D567 /* 葱姜类.json */,
 				844CAB942247BBCF0096D567 /* 豆类.json */,
 				844CAB922247BBCE0096D567 /* 根茎类.json */,
@@ -199,6 +310,49 @@
 				844CAB962247BBD00096D567 /* 叶菜类.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		844CABA8224914640096D567 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				844CABA9224914820096D567 /* CLZLoginViewController.h */,
+				844CABAA224914820096D567 /* CLZLoginViewController.m */,
+				844CABAC2249149D0096D567 /* CLZRegisterViewController.h */,
+				844CABAD2249149D0096D567 /* CLZRegisterViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		844CABB822491CBE0096D567 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				844CABB922491CC60096D567 /* CLZOrdersViewController.h */,
+				844CABBA22491CC60096D567 /* CLZOrdersViewController.m */,
+				844CABE82250CA920096D567 /* CLZMyOrdersPageViewController.h */,
+				844CABE92250CA920096D567 /* CLZMyOrdersPageViewController.m */,
+				844CABEB2250CAE20096D567 /* CLZMyOrderTableViewController.h */,
+				844CABEC2250CAE20096D567 /* CLZMyOrderTableViewController.m */,
+				844CABF4225252CF0096D567 /* CLZMyOrderTableViewCell.h */,
+				844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		844CABBC22491EA00096D567 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				844CABDC224E615F0096D567 /* CityModel.h */,
+				844CABDB224E615F0096D567 /* CityModel.m */,
+				844CABDA224E615F0096D567 /* RCAddressSelectView.h */,
+				844CABDD224E61600096D567 /* RCAddressSelectView.m */,
+				844CABDE224E61600096D567 /* RCAreaManager.h */,
+				844CABDF224E61610096D567 /* RCAreaManager.m */,
+				844CABBD22491EAC0096D567 /* CLZAddressManagerViewController.h */,
+				844CABBE22491EAC0096D567 /* CLZAddressManagerViewController.m */,
+				844CABE3224E62930096D567 /* CLZAddAddressViewController.h */,
+				844CABE4224E62930096D567 /* CLZAddAddressViewController.m */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		84866FEF223FD7F700D2B726 = {
@@ -251,6 +405,9 @@
 		84867011223FD81500D2B726 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				844CABBC22491EA00096D567 /* Address */,
+				844CABB822491CBE0096D567 /* Order */,
+				844CABA8224914640096D567 /* Login */,
 				84867057223FDC4400D2B726 /* Mine */,
 				84867053223FDC2600D2B726 /* ShoppingCar */,
 				84867052223FDC1800D2B726 /* Home */,
@@ -280,6 +437,7 @@
 				84867017223FD9A200D2B726 /* CLZBaseViewController.m */,
 				84867019223FD9BC00D2B726 /* CLZBaseNavigationController.h */,
 				8486701A223FD9BC00D2B726 /* CLZBaseNavigationController.m */,
+				844CABC022491EF30096D567 /* ClassName.plist */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -336,6 +494,10 @@
 				844CAB2C22426ED90096D567 /* View */,
 				8486704F223FDC0C00D2B726 /* CLZHomeViewController.h */,
 				84867050223FDC0D00D2B726 /* CLZHomeViewController.m */,
+				844CABC5224A74E30096D567 /* CLZHomeDisplayPageController.h */,
+				844CABC6224A74E30096D567 /* CLZHomeDisplayPageController.m */,
+				844CABCB224A81410096D567 /* CLZGoosListViewController.h */,
+				844CABCC224A81410096D567 /* CLZGoosListViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -345,6 +507,8 @@
 			children = (
 				84867054223FDC3C00D2B726 /* CLZCarViewController.h */,
 				84867055223FDC3C00D2B726 /* CLZCarViewController.m */,
+				844CABD7224E60770096D567 /* CLZConfirmOrderViewController.h */,
+				844CABD8224E60770096D567 /* CLZConfirmOrderViewController.m */,
 			);
 			path = ShoppingCar;
 			sourceTree = "<group>";
@@ -354,6 +518,12 @@
 			children = (
 				84867058223FDC4F00D2B726 /* CLZMineViewController.h */,
 				84867059223FDC4F00D2B726 /* CLZMineViewController.m */,
+				844CABAF22491A500096D567 /* CLZFanKuiViewController.h */,
+				844CABB022491A500096D567 /* CLZFanKuiViewController.m */,
+				844CABB222491AAC0096D567 /* CLZProtocolViewController.h */,
+				844CABB322491AAC0096D567 /* CLZProtocolViewController.m */,
+				844CABB522491ACE0096D567 /* CLZAboutViewController.h */,
+				844CABB622491ACE0096D567 /* CLZAboutViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -443,7 +613,9 @@
 				84867005223FD7FB00D2B726 /* Assets.xcassets in Resources */,
 				844CAB9C2247BBD10096D567 /* 特菜.json in Resources */,
 				844CAB982247BBD10096D567 /* 菌类.json in Resources */,
+				844CABC122491EF30096D567 /* ClassName.plist in Resources */,
 				844CAB9B2247BBD10096D567 /* 豆类.json in Resources */,
+				844CABE7224E6F940096D567 /* area.json in Resources */,
 				84867003223FD7F700D2B726 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,16 +678,37 @@
 				84867020223FDA7E00D2B726 /* MainViewController.m in Sources */,
 				8486703D223FDBA600D2B726 /* NSObject+DCNull.m in Sources */,
 				8486705A223FDC4F00D2B726 /* CLZMineViewController.m in Sources */,
+				844CABE2224E61610096D567 /* RCAreaManager.m in Sources */,
+				844CABAE2249149D0096D567 /* CLZRegisterViewController.m in Sources */,
 				84867040223FDBA600D2B726 /* UILabel+Common.m in Sources */,
+				844CABA1224912130096D567 /* CLZNetworkManager.m in Sources */,
 				84867046223FDBA600D2B726 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				84867051223FDC0D00D2B726 /* CLZHomeViewController.m in Sources */,
 				84867049223FDBA600D2B726 /* UIView+DCExtension.m in Sources */,
+				844CABD3224BB20A0096D567 /* CLZCarModel.m in Sources */,
+				844CABE0224E61610096D567 /* CityModel.m in Sources */,
+				844CABF322510BF90096D567 /* CLZConfig.m in Sources */,
+				844CABCD224A81410096D567 /* CLZGoosListViewController.m in Sources */,
+				844CABD9224E60770096D567 /* CLZConfirmOrderViewController.m in Sources */,
 				848670692241296300D2B726 /* CLZHomeCommendRequest.m in Sources */,
+				844CABF02250CD1B0096D567 /* CLZBaseModel.m in Sources */,
+				844CABAB224914820096D567 /* CLZLoginViewController.m in Sources */,
+				844CABB722491ACE0096D567 /* CLZAboutViewController.m in Sources */,
+				844CABCA224A80690096D567 /* CLZTypeModel.m in Sources */,
+				844CABE5224E62930096D567 /* CLZAddAddressViewController.m in Sources */,
 				84867066224125F400D2B726 /* CLZCommendModel.m in Sources */,
+				844CABBB22491CC60096D567 /* CLZOrdersViewController.m in Sources */,
 				84867047223FDBA600D2B726 /* UIImage+DCCircle.m in Sources */,
+				844CABB122491A500096D567 /* CLZFanKuiViewController.m in Sources */,
 				8486706C2241391B00D2B726 /* CLZGoodsTableViewCell.m in Sources */,
+				844CABA72249133C0096D567 /* CLZStorageManager.m in Sources */,
+				844CABF6225252CF0096D567 /* CLZMyOrderTableViewCell.m in Sources */,
+				844CABC4224923BB0096D567 /* CLZGoodsTypeModel.m in Sources */,
+				844CABF9225259150096D567 /* CLZOrderModel.m in Sources */,
 				84867018223FD9A200D2B726 /* CLZBaseViewController.m in Sources */,
 				84867045223FDBA600D2B726 /* UIColor+expanded.m in Sources */,
+				844CABEA2250CA920096D567 /* CLZMyOrdersPageViewController.m in Sources */,
+				844CABC7224A74E30096D567 /* CLZHomeDisplayPageController.m in Sources */,
 				84867043223FDBA600D2B726 /* UIView+Frame.m in Sources */,
 				8486703E223FDBA600D2B726 /* NSString+base64.m in Sources */,
 				8486703F223FDBA600D2B726 /* NSURL+DCHook.m in Sources */,
@@ -528,10 +721,17 @@
 				8486700B223FD7FB00D2B726 /* main.m in Sources */,
 				84867063224125DA00D2B726 /* CLZGoodsModel.m in Sources */,
 				84867056223FDC3C00D2B726 /* CLZCarViewController.m in Sources */,
+				844CABE1224E61610096D567 /* RCAddressSelectView.m in Sources */,
 				8486704A223FDBA600D2B726 /* UIImage+Common.m in Sources */,
+				844CABA42249130C0096D567 /* CLZUserInfo.m in Sources */,
+				844CABB422491AAC0096D567 /* CLZProtocolViewController.m in Sources */,
+				844CABD0224BB1E90096D567 /* CLZCarManager.m in Sources */,
+				844CABD6224D1A8A0096D567 /* CLZAddressModel.m in Sources */,
 				84866FFD223FD7F700D2B726 /* AppDelegate.m in Sources */,
+				844CABED2250CAE20096D567 /* CLZMyOrderTableViewController.m in Sources */,
 				84867044223FDBA600D2B726 /* UIColor+DCColorChange.m in Sources */,
 				84867042223FDBA600D2B726 /* UIImageView+DCExtension.m in Sources */,
+				844CABBF22491EAC0096D567 /* CLZAddressManagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

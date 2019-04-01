@@ -23,6 +23,7 @@ pod 'CDDPagerController'
 pod 'ZYCornerRadius'
 pod 'BlocksKit', '~> 2.2.5'
 pod 'AVOSCloud'
+pod 'WMPageController', '~> 2.4.0' 
   # Pods for cailanzi
 
 end

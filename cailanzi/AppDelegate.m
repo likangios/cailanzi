@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "AppDelegate+extend.h"
+#import "RCAreaManager.h"
 @interface AppDelegate ()
 
 @property(nonatomic,strong) MainViewController *mainTabBar;
@@ -37,6 +38,12 @@
     [self.window makeKeyAndVisible];
     [self setUpFixiOS11]; //适配IOS 11
     [self initAVOSCloud];
+    [self autoLogin];
+    [RCAreaManager shareInstance];
+    [[[CLZNetworkManager shareInstance] getCLZConfig] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+
     /*
     NSString *homePath = [[NSBundle mainBundle] pathForResource:@"叶菜类" ofType:@"json"];
     NSData *homeData = [NSData dataWithContentsOfFile:homePath];
@@ -46,6 +53,15 @@
     [self uploadDataWithIndex:self.index];
     */
     return YES;
+}
+- (void)autoLogin{
+    NSString *phone = [CLZStorageManager getUserPhone];
+    NSString *pwd = [CLZStorageManager getUserPassword];
+    if (phone.length & pwd.length) {
+        [[[CLZNetworkManager shareInstance] userLoginWithPhone:phone Password:pwd] subscribeCompleted:^{
+            NSLog(@"自动登录成功");
+        }];
+    }
 }
 - (void)uploadDataWithIndex:(NSInteger)index{
     if (index >= self.rows.count) {

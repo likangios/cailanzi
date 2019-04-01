@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLZLoginViewController</key>
+	<string>登录</string>
+	<key>CLZAddressManagerViewController</key>
+	<string>地址管理</string>
+	<key>CLZOrdersViewController</key>
+	<string>我的订单</string>
+	<key>CLZRegisterViewController</key>
+	<string>注册</string>
+	<key>CLZMineViewController</key>
+	<string>个人中心</string>
+	<key>CLZFanKuiViewController</key>
+	<string>意见反馈</string>
+	<key>CLZProtocolViewController</key>
+	<string>用户协议</string>
+	<key>CLZAboutViewController</key>
+	<string>关于</string>
+	<key>CLZCarViewController</key>
+	<string>菜篮子</string>
+	<key>CLZHomeViewController</key>
+	<string>首页</string>
+	<key>CLZConfirmOrderViewController</key>
+	<string>提交订单</string>
+</dict>
+</plist>

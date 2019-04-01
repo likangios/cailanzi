@@ -43,12 +43,14 @@
 
 #define HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
 
-#define MainColor [UIColor colorWithHexString:@"286cf9"]
+#define MainColor [UIColor colorWithHexString:@"1acaaf"]
 
 #define MainGrayColor [UIColor colorWithHexString:@"bfbfbf"]
 
 #define MainBGColor [UIColor colorWithHexString:@"e6e6e6"]
 
+
+#define errorMsg(error) error.userInfo[NSLocalizedDescriptionKey]?:error.userInfo[NSLocalizedFailureReasonErrorKey]
 
 
 /******************    TabBar          *************/
