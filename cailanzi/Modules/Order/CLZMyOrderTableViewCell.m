@@ -39,16 +39,23 @@
 }
 - (void)setModel:(CLZOrderModel *)model{
     _model = model;
+    NSDate *time = [NSDate dateWithTimeIntervalSince1970:_model.confirmTime.doubleValue];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    NSLocale*usLocale=[[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"];
+    formatter.locale = usLocale;
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *nows = [formatter stringFromDate:time];
+    
     if ([_model.orderType isEqualToString:@"0"]) {
-        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",_model.confirmTime[@"iso"]];
+        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",nows];
         self.statue_Label.text = @"已提交";
     }
     else if ([_model.orderType isEqualToString:@"1"]){
-        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",_model.confirmTime[@"iso"]];
+        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",nows];
         self.statue_Label.text = @"已确认";
     }
     else if ([_model.orderType isEqualToString:@"2"]){
-        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",_model.finishTime[@"iso"]];
+        self.time_Label.text = [NSString stringWithFormat:@"订单提交时间：%@",nows];
         self.statue_Label.text = @"已完成";
     }
     self.types_Label.text = [NSString stringWithFormat:@"共%ld种商品",_model.goodList.count];

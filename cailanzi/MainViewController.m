@@ -69,18 +69,16 @@
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     if ([self.viewControllers indexOfObject:viewController] == 2 && ![CLZUserInfo shareInstance].isLogin) {
-        [self showLogin];
+//        [self showLogin];
         return NO;
     }
     return YES;
 }
 - (void)showLogin{
-    
     UIViewController *login = [[NSClassFromString(@"CLZLoginViewController") alloc]init];
     UINavigationController *nav = [[NSClassFromString(@"CLZBaseNavigationController") alloc]initWithRootViewController:login];
     [self presentViewController:nav animated:YES completion:nil];
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -48,10 +48,13 @@
 #pragma mark - LifeCyle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+#if CLZ_DEBUG
     self.view.backgroundColor = [UIColor randomColor];
+#endif
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout  = UIRectEdgeNone;
-//    self.view.backgroundColor = [UIColor whiteColor];
     [self creatCustomNavBar];
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     [self bottomLine];

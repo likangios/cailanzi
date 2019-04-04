@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E98CDEA6A07F0343348F3F9 /* libPods-cailanzi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AAC29E36C816CDBD43A8A /* libPods-cailanzi.a */; };
 		844CAB3122426F7C0096D567 /* AppDelegate+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CAB3022426F7C0096D567 /* AppDelegate+extend.m */; };
-		844CAB982247BBD10096D567 /* 菌类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB912247BBCE0096D567 /* 菌类.json */; };
-		844CAB992247BBD10096D567 /* 根茎类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB922247BBCE0096D567 /* 根茎类.json */; };
-		844CAB9A2247BBD10096D567 /* 葱姜类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB932247BBCE0096D567 /* 葱姜类.json */; };
-		844CAB9B2247BBD10096D567 /* 豆类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB942247BBCF0096D567 /* 豆类.json */; };
-		844CAB9C2247BBD10096D567 /* 特菜.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB952247BBCF0096D567 /* 特菜.json */; };
-		844CAB9D2247BBD10096D567 /* 叶菜类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB962247BBD00096D567 /* 叶菜类.json */; };
-		844CAB9E2247BBD10096D567 /* 茄果类.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CAB972247BBD00096D567 /* 茄果类.json */; };
 		844CABA1224912130096D567 /* CLZNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA0224912130096D567 /* CLZNetworkManager.m */; };
 		844CABA42249130C0096D567 /* CLZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA32249130C0096D567 /* CLZUserInfo.m */; };
 		844CABA72249133C0096D567 /* CLZStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABA62249133C0096D567 /* CLZStorageManager.m */; };
@@ -86,13 +79,6 @@
 		503AAC29E36C816CDBD43A8A /* libPods-cailanzi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cailanzi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844CAB2F22426F7C0096D567 /* AppDelegate+extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+extend.h"; sourceTree = "<group>"; };
 		844CAB3022426F7C0096D567 /* AppDelegate+extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+extend.m"; sourceTree = "<group>"; };
-		844CAB912247BBCE0096D567 /* 菌类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "菌类.json"; path = "../../../../美菜/菌类.json"; sourceTree = "<group>"; };
-		844CAB922247BBCE0096D567 /* 根茎类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "根茎类.json"; path = "../../../../美菜/根茎类.json"; sourceTree = "<group>"; };
-		844CAB932247BBCE0096D567 /* 葱姜类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "葱姜类.json"; path = "../../../../美菜/葱姜类.json"; sourceTree = "<group>"; };
-		844CAB942247BBCF0096D567 /* 豆类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "豆类.json"; path = "../../../../美菜/豆类.json"; sourceTree = "<group>"; };
-		844CAB952247BBCF0096D567 /* 特菜.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "特菜.json"; path = "../../../../美菜/特菜.json"; sourceTree = "<group>"; };
-		844CAB962247BBD00096D567 /* 叶菜类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "叶菜类.json"; path = "../../../../美菜/叶菜类.json"; sourceTree = "<group>"; };
-		844CAB972247BBD00096D567 /* 茄果类.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "茄果类.json"; path = "../../../../美菜/茄果类.json"; sourceTree = "<group>"; };
 		844CAB9F224912130096D567 /* CLZNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZNetworkManager.h; sourceTree = "<group>"; };
 		844CABA0224912130096D567 /* CLZNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZNetworkManager.m; sourceTree = "<group>"; };
 		844CABA22249130C0096D567 /* CLZUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZUserInfo.h; sourceTree = "<group>"; };
@@ -301,13 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				844CABE6224E6F940096D567 /* area.json */,
-				844CAB932247BBCE0096D567 /* 葱姜类.json */,
-				844CAB942247BBCF0096D567 /* 豆类.json */,
-				844CAB922247BBCE0096D567 /* 根茎类.json */,
-				844CAB972247BBD00096D567 /* 茄果类.json */,
-				844CAB912247BBCE0096D567 /* 菌类.json */,
-				844CAB952247BBCF0096D567 /* 特菜.json */,
-				844CAB962247BBD00096D567 /* 叶菜类.json */,
 			);
 			path = json;
 			sourceTree = "<group>";
@@ -606,15 +585,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84867008223FD7FB00D2B726 /* LaunchScreen.storyboard in Resources */,
-				844CAB9E2247BBD10096D567 /* 茄果类.json in Resources */,
-				844CAB9D2247BBD10096D567 /* 叶菜类.json in Resources */,
-				844CAB992247BBD10096D567 /* 根茎类.json in Resources */,
-				844CAB9A2247BBD10096D567 /* 葱姜类.json in Resources */,
 				84867005223FD7FB00D2B726 /* Assets.xcassets in Resources */,
-				844CAB9C2247BBD10096D567 /* 特菜.json in Resources */,
-				844CAB982247BBD10096D567 /* 菌类.json in Resources */,
 				844CABC122491EF30096D567 /* ClassName.plist in Resources */,
-				844CAB9B2247BBD10096D567 /* 豆类.json in Resources */,
 				844CABE7224E6F940096D567 /* area.json in Resources */,
 				84867003223FD7F700D2B726 /* Main.storyboard in Resources */,
 			);

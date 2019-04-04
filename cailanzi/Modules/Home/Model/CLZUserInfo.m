@@ -20,4 +20,13 @@
 + (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper{
     return @{@"nickName":@"username"};
 }
+- (BOOL)isLogin{
+    if (!_isLogin) {
+        UIViewController *login = [[NSClassFromString(@"CLZLoginViewController") alloc]init];
+        UINavigationController *nav = [[NSClassFromString(@"CLZBaseNavigationController") alloc]initWithRootViewController:login];
+        UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [root presentViewController:nav animated:YES completion:nil];
+    }
+    return _isLogin;
+}
 @end

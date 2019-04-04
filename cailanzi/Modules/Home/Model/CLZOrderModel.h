@@ -12,7 +12,7 @@
 @property(nonatomic,strong) CLZAddressModel *address;
 @property(nonatomic,strong) NSString *remark;
 @property(nonatomic,strong) NSString *orderSerialNumber;
-@property(nonatomic,strong) NSDictionary *confirmTime;
+@property(nonatomic,strong) NSNumber *confirmTime;
 @property(nonatomic,strong) NSString *user_objectId;
 @property(nonatomic,strong) NSString *orderType;
 @property(nonatomic,strong) NSDictionary *finishTime;

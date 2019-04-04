@@ -39,6 +39,7 @@
         _phone.keyboardType = UIKeyboardTypeNumberPad;
         UIImageView *icon = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
         icon.image = [UIImage imageNamed:@"mobile"];
+        _phone.clearButtonMode  =UITextFieldViewModeAlways;
         _phone.leftViewMode = UITextFieldViewModeAlways;
         _phone.leftView = icon;
         _phone.text = [CLZUserInfo
@@ -54,6 +55,7 @@
         UIImageView *icon = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
         icon.image = [UIImage imageNamed:@"mima"];
         _password.leftViewMode = UITextFieldViewModeAlways;
+        _password.clearButtonMode  =UITextFieldViewModeAlways;
         _password.secureTextEntry = YES;
         _password.leftView = icon;
     }

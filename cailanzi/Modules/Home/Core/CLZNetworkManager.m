@@ -182,7 +182,7 @@ static CLZNetworkManager *_instance;
         [avobj setObject:list forKey:@"goodList"];
         [avobj setObject:[CLZUserInfo shareInstance].objectId forKey:@"user_objectId"];
         [avobj setObject:[self orderNumber] forKey:@"orderSerialNumber"];
-        [avobj setObject:[NSDate date] forKey:@"confirmTime"];
+        [avobj setObject:@([[NSDate date] timeIntervalSince1970]) forKey:@"confirmTime"];
         [avobj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             if (error) {
                 [subscriber sendNext:error];

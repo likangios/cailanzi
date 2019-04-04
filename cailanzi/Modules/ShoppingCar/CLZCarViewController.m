@@ -154,6 +154,9 @@
         if (!self.dataArray.count) {
             return ;
         }
+        if (![CLZUserInfo shareInstance].isLogin) {
+            return;
+        }
         if (!self.addressModel) {
             [self showHUDMessage:@"选择收货地址"];
             return;
@@ -179,13 +182,24 @@
             }
         }];;
     }];
+    [RACObserve([CLZUserInfo shareInstance], isLogin) subscribeNext:^(NSNumber * x) {
+        if (!x.boolValue) {
+            self.addressModel = nil;
+        }
+    }];
     [RACObserve(self, addressModel) subscribeNext:^(id  _Nullable x) {
         if (x) {
             self.topLabel.text = [NSString stringWithFormat:@"%@ %@\n%@%@%@%@",self.addressModel.userName,self.addressModel.phoneNumber,self.addressModel.province,self.addressModel.city,self.addressModel.country,self.addressModel.detailAddress];
         }
+        else{
+            self.topLabel.text = @"选择送货地址 >";
+        }
     }];
     
     [self.addressView bk_whenTapped:^{
+        if (![CLZUserInfo shareInstance].isLogin) {
+            return;
+        }
         CLZAddressManagerViewController *address = [[CLZAddressManagerViewController alloc]init];
         [address setSelectAddress:^(CLZAddressModel *address) {
             self.addressModel = address;

@@ -10,8 +10,9 @@
 #define Macros_h
 
 
-#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define  CLZ_DEBUG  0
 
+#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 #define DCIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
