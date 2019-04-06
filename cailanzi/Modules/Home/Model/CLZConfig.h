@@ -12,4 +12,6 @@
 
 @property(nonatomic,strong) NSNumber *minePrice;
 
+@property(nonatomic,strong) NSNumber *orderTime;
+
 @end

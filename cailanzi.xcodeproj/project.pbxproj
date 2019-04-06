@@ -39,6 +39,8 @@
 		844CABF322510BF90096D567 /* CLZConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF222510BF90096D567 /* CLZConfig.m */; };
 		844CABF6225252CF0096D567 /* CLZMyOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */; };
 		844CABF9225259150096D567 /* CLZOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CABF8225259150096D567 /* CLZOrderModel.m */; };
+		8472A0F522578B05000B1B10 /* CLZMyOrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472A0F422578B05000B1B10 /* CLZMyOrderDetailsViewController.m */; };
+		8472A0F82257A0D7000B1B10 /* CLZEditGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472A0F72257A0D7000B1B10 /* CLZEditGoodsViewController.m */; };
 		84866FFD223FD7F700D2B726 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84866FFC223FD7F700D2B726 /* AppDelegate.m */; };
 		84867000223FD7F700D2B726 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84866FFF223FD7F700D2B726 /* ViewController.m */; };
 		84867003223FD7F700D2B726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84867001223FD7F700D2B726 /* Main.storyboard */; };
@@ -137,6 +139,10 @@
 		844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZMyOrderTableViewCell.m; sourceTree = "<group>"; };
 		844CABF7225259150096D567 /* CLZOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZOrderModel.h; sourceTree = "<group>"; };
 		844CABF8225259150096D567 /* CLZOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZOrderModel.m; sourceTree = "<group>"; };
+		8472A0F322578B05000B1B10 /* CLZMyOrderDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZMyOrderDetailsViewController.h; sourceTree = "<group>"; };
+		8472A0F422578B05000B1B10 /* CLZMyOrderDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZMyOrderDetailsViewController.m; sourceTree = "<group>"; };
+		8472A0F62257A0D7000B1B10 /* CLZEditGoodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLZEditGoodsViewController.h; sourceTree = "<group>"; };
+		8472A0F72257A0D7000B1B10 /* CLZEditGoodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLZEditGoodsViewController.m; sourceTree = "<group>"; };
 		84866FF8223FD7F700D2B726 /* cailanzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cailanzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84866FFB223FD7F700D2B726 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84866FFC223FD7F700D2B726 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -313,6 +319,8 @@
 				844CABEC2250CAE20096D567 /* CLZMyOrderTableViewController.m */,
 				844CABF4225252CF0096D567 /* CLZMyOrderTableViewCell.h */,
 				844CABF5225252CF0096D567 /* CLZMyOrderTableViewCell.m */,
+				8472A0F322578B05000B1B10 /* CLZMyOrderDetailsViewController.h */,
+				8472A0F422578B05000B1B10 /* CLZMyOrderDetailsViewController.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -477,6 +485,8 @@
 				844CABC6224A74E30096D567 /* CLZHomeDisplayPageController.m */,
 				844CABCB224A81410096D567 /* CLZGoosListViewController.h */,
 				844CABCC224A81410096D567 /* CLZGoosListViewController.m */,
+				8472A0F62257A0D7000B1B10 /* CLZEditGoodsViewController.h */,
+				8472A0F72257A0D7000B1B10 /* CLZEditGoodsViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -667,8 +677,10 @@
 				844CABAB224914820096D567 /* CLZLoginViewController.m in Sources */,
 				844CABB722491ACE0096D567 /* CLZAboutViewController.m in Sources */,
 				844CABCA224A80690096D567 /* CLZTypeModel.m in Sources */,
+				8472A0F82257A0D7000B1B10 /* CLZEditGoodsViewController.m in Sources */,
 				844CABE5224E62930096D567 /* CLZAddAddressViewController.m in Sources */,
 				84867066224125F400D2B726 /* CLZCommendModel.m in Sources */,
+				8472A0F522578B05000B1B10 /* CLZMyOrderDetailsViewController.m in Sources */,
 				844CABBB22491CC60096D567 /* CLZOrdersViewController.m in Sources */,
 				84867047223FDBA600D2B726 /* UIImage+DCCircle.m in Sources */,
 				844CABB122491A500096D567 /* CLZFanKuiViewController.m in Sources */,
@@ -780,7 +792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -832,7 +844,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -853,7 +865,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ting.cailanzi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopping.hhxs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -873,7 +885,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ting.cailanzi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopping.hhxs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

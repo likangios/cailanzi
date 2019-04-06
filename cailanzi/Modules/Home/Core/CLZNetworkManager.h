@@ -29,9 +29,11 @@ typedef enum : NSUInteger {
 - (RACSignal *)userLogout;
 - (RACSignal *)schoolPushMessage:(NSString *)title Content:(NSString *)content;
 - (RACSignal *)getAddressList;
-- (RACSignal *)confirmOrder:(NSDictionary *)address goodsList:(NSMutableArray *)list;
+- (RACSignal *)confirmOrder:(NSDictionary *)address goodsList:(NSMutableArray *)list remark:(NSString *)remark;
 - (RACSignal *)updateAddress:(CLZAddressModel *)model;
+- (RACSignal *)updateOrderWithobjectId:(NSString *)objectId Type:(NSNumber *)type;
 - (RACSignal *)getMyOrdersWithType:(NSString *)type;
 - (RACSignal *)getCLZConfig;
-
+- (RACSignal *)updateUserInfo;
+- (RACSignal *)updateGoods:(CLZGoodsModel *)model;
 @end

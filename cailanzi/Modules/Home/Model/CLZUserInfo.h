@@ -15,6 +15,8 @@
 
 @property(nonatomic,strong) NSString *phone;
 
+@property(nonatomic,strong) NSNumber *admin;
+
 @property(nonatomic,strong) NSString *password;
 
 @property(nonatomic,assign) BOOL isLogin;

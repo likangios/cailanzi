@@ -20,16 +20,24 @@
         [self.add mas_updateConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(40.0);
         }];
-        self.add.userInteractionEnabled = YES;
     }
     else{
         [self.add mas_updateConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(80.0);
         }];
-        self.add.userInteractionEnabled = NO;
     }
     self.number.hidden = !_showNumber;
     self.sub.hidden = !_showNumber;
+}
+- (void)showNumberWith:(NSInteger)count{
+    self.sub.hidden = YES;
+    self.add.hidden = YES;
+    self.number.hidden = NO;
+    self.number.text = [NSString stringWithFormat:@"数量：%ld",count];
+    [self.number mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.right.mas_equalTo(-20);
+    }];
 }
 - (UILabel *)number{
     
@@ -49,9 +57,6 @@
         [_add setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
         [_add setTitleColor:MainColor forState:UIControlStateNormal];
         _add.titleLabel.font = [UIFont systemFontOfSize:40];
-//        _add.layer.cornerRadius = 20.0;
-//        _add.layer.borderColor = MainColor.CGColor;
-//        _add.layer.borderWidth = 1.0;
         _add.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 
     }
@@ -63,9 +68,6 @@
         [_sub setImage:[UIImage imageNamed:@"sub"] forState:UIControlStateNormal];
         [_sub setTitleColor:MainColor forState:UIControlStateNormal];
         _sub.titleLabel.font = [UIFont systemFontOfSize:40];
-//        _sub.layer.cornerRadius = 20.0;
-//        _sub.layer.borderColor = MainColor.CGColor;
-//        _sub.layer.borderWidth = 1.0;
         _sub.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 
     }
@@ -114,10 +116,21 @@
         }];
         self.showNumber = NO;
         [[self.add rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-            [[CLZCarManager shareInstance] addGoodsToCar:self.goodModel];
+            if (self.addGoodsBlock) {
+                self.addGoodsBlock(self.goodModel);
+            }
+            else{
+                [[CLZCarManager shareInstance] addGoodsToCar:self.goodModel];
+            }
         }];
         [[self.sub rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [[CLZCarManager shareInstance] removeGoods:self.goodModel];
+        }];
+        
+        [self.contentView addSubview:self.yixiajia];
+        [self.yixiajia mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(96, 60));
+            make.center.equalTo(self.contentView);
         }];
         
     }
@@ -133,8 +146,13 @@
     [self.goodImage sd_setImageWithURL:[NSURL URLWithString:_goodModel.img_url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
     }];
     self.goodName.text = _goodModel.name;
-    self.total_format_price.text = [NSString stringWithFormat:@"￥%.2f/%@",_goodModel.total_price.floatValue,_goodModel.total_format];
-
+    self.total_format_price.text = [NSString stringWithFormat:@"￥%@/%@",_goodModel.total_price,_goodModel.total_format];
+    if ([_goodModel.isShopping isEqualToString:@"0"]) {
+        self.yixiajia.hidden = NO;
+    }
+    else{
+        self.yixiajia.hidden = YES;
+    }
     
 }
 - (UIImageView *)goodImage{
@@ -154,6 +172,15 @@
         _goodName.font = [UIFont systemFontOfSize:15];
     }
     return _goodName;
+}
+- (UIImageView *)yixiajia{
+    if (!_yixiajia) {
+        _yixiajia = [[UIImageView alloc]init];
+        _yixiajia.image = [UIImage imageNamed:@"yixiajia"];
+        _yixiajia.contentMode = UIViewContentModeScaleAspectFill;
+        _yixiajia.hidden = YES;
+    }
+    return _yixiajia;
 }
 - (UILabel *)total_format_price{
     if (!_total_format_price) {

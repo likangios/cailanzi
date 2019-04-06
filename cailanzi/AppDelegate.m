@@ -10,7 +10,10 @@
 #import "MainViewController.h"
 #import "AppDelegate+extend.h"
 #import "RCAreaManager.h"
-@interface AppDelegate ()
+
+#import <GDTMobSDK/GDTSplashAd.h>
+
+@interface AppDelegate ()<GDTSplashAdDelegate>
 
 @property(nonatomic,strong) MainViewController *mainTabBar;
 
@@ -43,7 +46,14 @@
     [[[CLZNetworkManager shareInstance] getCLZConfig] subscribeNext:^(id  _Nullable x) {
         
     }];
-
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    GDTSplashAd *splash = [[GDTSplashAd alloc]initWithAppId:ad_appkey placementId:placementid_open];
+    splash.delegate = self;
+    splash.fetchDelay = 3;
+    [splash loadAdAndShowInWindow:self.window];
+    
+    
     /*
     NSString *homePath = [[NSBundle mainBundle] pathForResource:@"叶菜类" ofType:@"json"];
     NSData *homeData = [NSData dataWithContentsOfFile:homePath];
@@ -107,6 +117,7 @@
         }
     }];
 }
+
 #pragma mark - 适配
 - (void)setUpFixiOS11
 {
@@ -117,7 +128,12 @@
         UITableView.appearance.estimatedSectionHeaderHeight = 0;
     }
 }
-
+- (void)splashAdSuccessPresentScreen:(GDTSplashAd *)splashAd{
+    NSLog(@"开屏广告展示成功");
+}
+- (void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error{
+    NSLog(@"开屏广告展示失败：%@",error.description);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

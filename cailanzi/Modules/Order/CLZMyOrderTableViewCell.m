@@ -149,6 +149,13 @@
         make.bottom.mas_equalTo(0);
     }];
     
+    [self.bgView addSubview:self.arrowImage];
+    [self.arrowImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.order_number_Label.mas_centerY);
+        make.right.mas_equalTo(-15);
+        make.size.mas_equalTo(25);
+    }];
+    
     
 }
 - (UIView *)bgView{

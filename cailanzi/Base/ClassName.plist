@@ -24,5 +24,9 @@
 	<string>首页</string>
 	<key>CLZConfirmOrderViewController</key>
 	<string>提交订单</string>
+	<key>CLZMyOrderDetailsViewController</key>
+	<string>订单详情</string>
+	<key>CLZEditGoodsViewController</key>
+	<string>编辑商品</string>
 </dict>
 </plist>

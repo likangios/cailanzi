@@ -42,7 +42,8 @@
         _appName.textColor = [UIColor blackColor];
         _appName.textAlignment = NSTextAlignmentLeft;
         _appName.font = [UIFont systemFontOfSize:14];
-        _appName.text = @"  应用名称：菜篮子";
+        NSString *name = [NSString stringWithFormat:@"      应用名称:%@",[NSBundle mainBundle].infoDictionary[@"CFBundleDisplayName"]];
+        _appName.text = name;
     }
     return _appName;
 }
@@ -54,7 +55,8 @@
         _appVersion.textColor = [UIColor blackColor];
         _appVersion.textAlignment = NSTextAlignmentLeft;
         _appVersion.font = [UIFont systemFontOfSize:14];
-        _appVersion.text = @"   应用版本：1.0.0";
+        NSString *version = [NSString stringWithFormat:@"       应用版本:%@",[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
+        _appVersion.text = version;
     }
     return _appVersion;
 }

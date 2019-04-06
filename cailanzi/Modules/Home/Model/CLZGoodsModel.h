@@ -24,10 +24,11 @@
 @property(nonatomic,strong) NSString *name;
 @property(nonatomic,strong) NSString *alias_name;
 @property(nonatomic,strong) NSString *total_format;
-@property(nonatomic,strong) NSNumber *total_price;
+@property(nonatomic,strong) NSString *total_price;
 @property(nonatomic,strong) NSString *unit_price;
 @property(nonatomic,strong) NSString *price_unit;
 @property(nonatomic,strong) NSNumber *ssu_id;
-@property(nonatomic,strong) NSNumber *type;
+@property(nonatomic,strong) NSString *type;
 @property(nonatomic,strong) NSString *img_url;
+@property(nonatomic,strong) NSString *isShopping;
 @end

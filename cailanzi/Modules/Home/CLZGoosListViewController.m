@@ -8,6 +8,8 @@
 
 #import "CLZGoosListViewController.h"
 #import "CLZGoodsTableViewCell.h"
+#import "CLZEditGoodsViewController.h"
+
 @interface CLZGoosListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) NSString *type;
@@ -34,8 +36,13 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self loadData];
+    });
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadData];
-    
 }
 - (void)loadData{
     @weakify(self);
@@ -79,12 +86,21 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     CLZGoodsModel *model = self.dataArray[indexPath.row];
     cell.goodModel = model;
+    [cell setAddGoodsBlock:^(CLZGoodsModel *model) {
+        [self addWithModel:model];
+    }];
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CLZGoodsModel *model = self.dataArray[indexPath.row];
+- (void)addWithModel:(CLZGoodsModel *)model{
     [[CLZCarManager shareInstance] addGoodsToCar:model];
     [self showHUDMessage:@"加入菜篮子"];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([CLZUserInfo shareInstance].admin.integerValue == 99) {
+        CLZEditGoodsViewController *edit = [[CLZEditGoodsViewController alloc]init];
+        edit.model = self.dataArray[indexPath.row];
+        [self.navigationController pushViewController:edit animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

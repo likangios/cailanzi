@@ -27,6 +27,21 @@
     [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:MainColor} forState:UIControlStateSelected];
     [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"7e7e7e"]} forState:UIControlStateNormal];
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    @weakify(self);
+    [[[CLZNetworkManager shareInstance] updateUserInfo] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if ([x isKindOfClass:[NSError class]]) {
+            NSError *error = (NSError *)x;
+            [self showHUDMessage:errorMsg(error)];
+        }
+        else{
+            [self.tableView reloadData];
+        }
+    }];
+    
+}
 
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -40,7 +55,7 @@
     return _tableView;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 7;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {

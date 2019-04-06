@@ -17,6 +17,8 @@
 
 @property(nonatomic,strong) UILabel *number;
 
+@property(nonatomic,strong) UIImageView *yixiajia;
+
 @property(nonatomic,strong) UIButton *add;
 
 @property(nonatomic,strong) UIButton *sub;
@@ -26,5 +28,10 @@
 @property(nonatomic,strong) CLZGoodsModel *goodModel;
 
 @property(nonatomic,strong) CLZCarModel *carModel;
+
+- (void)showNumberWith:(NSInteger)count;
+
+@property(nonatomic,copy) void (^addGoodsBlock)(CLZGoodsModel *model);
+
 
 @end

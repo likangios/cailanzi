@@ -174,7 +174,7 @@
 - (UIButton *)confirmButton{
     if (!_confirmButton) {
         _confirmButton =[UIButton buttonWithType:UIButtonTypeCustom];
-        [_confirmButton setTitle:@"添加" forState:UIControlStateNormal];
+        [_confirmButton setTitle:@"保存" forState:UIControlStateNormal];
         [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _confirmButton.backgroundColor = MainColor;
         _confirmButton.layer.cornerRadius = 4;

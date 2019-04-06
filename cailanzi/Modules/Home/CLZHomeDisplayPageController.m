@@ -18,12 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    @weakify(self);
-    [[[CLZNetworkManager shareInstance] getMenumItemData] subscribeNext:^(id  _Nullable x) {
-        @strongify(self);
-        self.titlesArray = x;
-        [self reloadData];
-    }];
     self.menuViewStyle = WMMenuViewStyleLine;
     self.titleColorSelected = MainColor;
     self.titleColorNormal = [UIColor  blackColor];
@@ -32,8 +26,31 @@
     self.progressHeight = 3.0;
     self.menuViewLayoutMode = WMMenuViewLayoutModeCenter;
     self.titleSizeSelected = 15;
+    [self loadData];
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status > 0) {
+            [self loadData];
+        }
+    }];
 }
-
+- (void)loadData{
+    @weakify(self);
+    [[[CLZNetworkManager shareInstance] getMenumItemData] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if ([x isKindOfClass:[NSError class]]) {
+            NSError *error = (NSError *)x;
+            [self showHUDMessage:errorMsg(error)];
+        }
+        else{
+            self.titlesArray = x;
+            [self reloadData];
+        }
+    }];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 #pragma mark - ============== WMPageControllerDataSource ==============
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
     return self.titlesArray.count;

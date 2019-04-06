@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-static NSInteger navBarH = 64;
+#define navBarH  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+
 
 @interface CLZBaseViewController : UIViewController
 

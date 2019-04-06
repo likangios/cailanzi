@@ -10,6 +10,11 @@
 #define Macros_h
 
 
+#define ad_appkey @"1108669589"
+
+#define placementid_open  @"1060152884084724"
+
+
 #define  CLZ_DEBUG  0
 
 #define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)

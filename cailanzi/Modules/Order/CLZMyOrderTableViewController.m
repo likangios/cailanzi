@@ -8,6 +8,8 @@
 
 #import "CLZMyOrderTableViewController.h"
 #import "CLZMyOrderTableViewCell.h"
+#import "CLZMyOrderDetailsViewController.h"
+
 @interface CLZMyOrderTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,assign) NSString *type;
@@ -34,6 +36,10 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadData];
 }
 - (void)loadData{
@@ -79,6 +85,9 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CLZMyOrderDetailsViewController *detail = [[CLZMyOrderDetailsViewController alloc]init];
+    detail.model = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

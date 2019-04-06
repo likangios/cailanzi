@@ -35,7 +35,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSArray *hiddenTabBarClass = @[@"CLZAddressManagerViewController",@"CLZOrdersViewController",@"CLZFanKuiViewController"];
+        NSArray *hiddenTabBarClass = @[@"CLZAddressManagerViewController",@"CLZOrdersViewController",@"CLZFanKuiViewController",@"CLZEditGoodsViewController",@"CLZAboutViewController",@"CLZProtocolViewController"];
         BOOL shouldHid = [hiddenTabBarClass bk_any:^BOOL(NSString* obj) {
             return [obj isEqualToString:NSStringFromClass(self.class)];
         }];

@@ -25,8 +25,6 @@
 
 @property(nonatomic,strong) UILabel *topLabel;
 
-@property(nonatomic,strong) UILabel *detailsLabel;
-
 @property(nonatomic,strong) YYTextView *remarkTextView;
 
 @property(nonatomic,strong) CLZAddressModel *addressModel;
@@ -81,6 +79,8 @@
         _total_money.backgroundColor = [UIColor clearColor];
         _total_money.textColor = [UIColor blackColor];
         _total_money.textAlignment = NSTextAlignmentLeft;
+        _total_money.minimumScaleFactor = 0.5;
+        [_total_money setAdjustsFontSizeToFitWidth:YES];
         _total_money.font = [UIFont boldSystemFontOfSize:28];
         _total_money.text = @"总价￥：00.00";
     }
@@ -157,6 +157,13 @@
         if (![CLZUserInfo shareInstance].isLogin) {
             return;
         }
+        NSDate *nowDate = [NSDate date];
+        if (nowDate.hour >= [CLZConfig shareInstance].orderTime.integerValue) {
+            NSString *orderTime = [NSString stringWithFormat:@"当日下单截止时间：%ld:00",(long)[CLZConfig shareInstance].orderTime.integerValue];
+            [self showHUDMessage:orderTime];
+            return;
+        }
+        
         if (!self.addressModel) {
             [self showHUDMessage:@"选择收货地址"];
             return;
@@ -166,12 +173,14 @@
             [self showHUDMessage:minePrice];
             return;
         }
+        self.confirm.userInteractionEnabled  = NO;
         NSMutableArray *array = [NSMutableArray array];
         [self.dataArray enumerateObjectsUsingBlock:^(CLZCarModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [array addObject:[obj  modelToJSONObject]];
         }];
         NSDictionary *address = [self.addressModel mj_JSONObject];
-        [[[CLZNetworkManager shareInstance] confirmOrder:address goodsList:array] subscribeNext:^(id  _Nullable x) {
+        [[[CLZNetworkManager shareInstance] confirmOrder:address goodsList:array remark:self.remarkTextView.text] subscribeNext:^(id  _Nullable x) {
+            self.confirm.userInteractionEnabled  = YES;
             if ([x isKindOfClass:[NSError class]]) {
                 NSError *error = (NSError *)x;
                 [self showHUDMessage:errorMsg(error)];
@@ -217,6 +226,8 @@
     [self loadData];
 }
 - (void)loadData{
+    [[[CLZNetworkManager shareInstance] getCLZConfig] subscribeNext:^(id  _Nullable x) {
+    }];
     self.dataArray = [[CLZCarManager shareInstance] getAllCarGoods];
     [self.tableView reloadData];
 }
